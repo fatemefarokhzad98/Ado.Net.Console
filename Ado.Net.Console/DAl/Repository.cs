@@ -10,7 +10,7 @@ namespace Ado.Net.Console.DAl
 {
     internal class Repository
     {
-        private const string ConnectionString = "Server=.;Initial Catalog=studentdb;Integrated Security=True;TrustServerCertificate=True";
+        private const string ConnectionString = "Server=DESKTOP-CGR2LP5\\MSSQLSERVER2022;Initial Catalog=studentdb;Integrated Security=True;TrustServerCertificate=True";
 
       public void PritAllStudent()
         {
@@ -22,7 +22,7 @@ namespace Ado.Net.Console.DAl
                     con.Open();
                     SqlCommand command = con.CreateCommand();
                     command.CommandType = System.Data.CommandType.Text;
-                    command.CommandText = " select*from studentdb";
+                    command.CommandText = " select*from Students";
                     var reader = command.ExecuteReader();
                     while (reader.Read())
                     {
